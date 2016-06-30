@@ -11,8 +11,10 @@ echo "-----》git commit"
 git commit -m ${push_info}
 if [ $? -eq 1 ]; then echo -e "commit 失败"; exit 1; fi
 
+echo "-----》git pull"
 git pull
 if [ $? -eq 1 ]; then echo -e "pull 失败"; exit 1; fi
 
+echo "-----》git push"
 git push	
 if [ $? -eq 1 ]; then echo -e "push 失败"; exit 1; fi
